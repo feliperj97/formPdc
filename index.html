@@ -184,21 +184,16 @@
                     </div>
 
                     <div class="form-row">
-                        <div class="col">
-                            <label>Sono: </label>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="sonoOp" id="s1" value="1">
-                                <label class="form-check-label" for="s1">Insonia</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="sonoOp" id="s2" value="2">
-                                <label class="form-check-label" for="s2">Menos de 8 horas</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="sonoOp" id="s3" value="3">
-                                <label class="form-check-label" for="s3">Mais de 8 horas</label>
-                            </div>
-                        </div>
+                        <!-- <div class="col"> -->
+                        <label for="sonoId">Sono</label>
+                        <select id="sonoId" class="form-control">
+                            <option selected>Selecione</option>
+                            <option value="1">Insonia</option>
+                            <option value="2">Menos de 8 horas</option>
+                            <option value="3">Mais de 8 horas</option>
+                        </select>
+
+                        <!-- </div> -->
                     </div>
                     <div class="form-row">
                         <div class="col">
@@ -222,6 +217,77 @@
                                 <input class="form-check-input" type="radio" name="medicoOp" id="m2" value="2">
                                 <label class="form-check-label" for="m2">Não</label>
                             </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label for="horarioAlimentacao">Qual horário mais se alimenta?</label>
+                        <select id="horarioAlimentacao" class="form-control">
+                            <option selected>Selecione</option>
+                            <option value="1">Manhã</option>
+                            <option value="2">Tarde</option>
+                            <option value="3">Noite</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="gestacao">Gestação</label>
+                        <select id="gestacao" class="form-control">
+                            <option selected>Selecione</option>
+                            <option value="1">Nulípara(nunca foi gestante)</option>
+                            <option value="2">Primípara(1 gestação)</option>
+                            <option value="3">Multípara(Várias gestações)</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label>Pratica atividade física: </label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="fisicaOp" id="f1" value="1">
+                                <label class="form-check-label" for="f1">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="fisicaOp" id="f2" value="2">
+                                <label class="form-check-label" for="f2">Não</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="fiscaId">Qual tipo?</label>
+                            <input type="text" class="form-control" id="fisicaId">
+
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="ciclo">Ciclo menstrual</label>
+                            <select id="ciclo" class="form-control">
+                                <option selected>Selecione</option>
+                                <option value="1">Regular</option>
+                                <option value="2">Irregular</option>
+                                <option value="3">Não possui(hiserectomia - ligadura)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="anticon">Método anticoncepcional</label>
+                            <select id="anticon" class="form-control">
+                                <option selected>Selecione</option>
+                                <option value="1">Pilula</option>
+                                <option value="2">DIU</option>
+                                <option value="3">Injeção</option>
+                                <option value="4">Camisinha</option>
+                                <option value="5">nda</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label for="sindrome">Sindrome Pré-menstrual</label>
+                            <select id="sindrome" class="form-control">
+                                <option selected>Selecione</option>
+                                <option value="1">Edema</option>
+                                <option value="2">Ansiedade</option>
+                                <option value="3">Irritação</option>
+                                <option value="4">Doces</option>
+                                <option value="5">nda</option>
+                            </select>
                         </div>
                     </div>
                 </div>
