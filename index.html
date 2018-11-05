@@ -19,16 +19,14 @@
         <form id="pacient-data">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" id="personal-tab" data-toggle="tab" href="#personal" role="tab"
-                        aria-controls="home" aria-selected="true">Dados Pessoais</a>
+                    <a class="nav-link active" id="personal-tab" data-toggle="tab" href="#personal" role="tab" aria-controls="home" aria-selected="true">Dados Pessoais</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="history-tab" data-toggle="tab" href="#history" role="tab" aria-controls="profile"
-                        aria-selected="false">Histórico</a>
+                    <a class="nav-link" id="history-tab" data-toggle="tab" href="#history" role="tab" aria-controls="profile" aria-selected="false">Histórico</a>
                 </li>
-                
+
             </ul>
-            
+
 
             <fieldset class="form-group">
                 <h2>Ficha do cliente</h2>
@@ -40,7 +38,8 @@
                         <label for="avdate">Data da avaliação</label>
                         <input type="date" class="form-control" name="avDate" id="avdate">
                     </div>
-                </div><br>
+                </div>
+                <br>
                 <div id="personal" class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="personal-tab">
                     <!--DADOS PESSOAIS DO PACIENTE-->
                     <h3>Dados pessoais</h3>
@@ -126,38 +125,41 @@
                             <input type="text" name="contatoEmergencia" class="form-control" id="contatoEmergencia">
                         </div>
                     </div>
-                </div><br>
-                <!--HITÓRICO DO PACIENTE-->
+                </div>
+                <br>
+                <!--HISTÓRICO DO PACIENTE-->
                 <div id="history" class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="history-tab">
                     <h3>Histórico</h3>
                     <div class="form-row">
 
                         <div class="col">
-                            <label>Fumante: </label>
+                            <label>Fumante:</label>
+
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                    value="1">
-                                <label class="form-check-label" for="inlineRadio1">Sim</label>
+                                <input class="form-check-input" type="radio" name="fumanteOp" id="idFuma" value="1">
+                                <label class="form-check-label" for="idFuma">Sim</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                    value="2">
-                                <label class="form-check-label" for="inlineRadio2">Não</label>
+                                <input class="form-check-input" type="radio" name="fumanteOp" id="idNaoFuma" value="2">
+                                <label class="form-check-label" for="idNaoFuma">Não</label>
                             </div>
+
                         </div>
 
 
 
                         <div class="col">
                             <label>Etilista(Bebida alcóolica): </label>
+
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="1" value="1">
-                                <label class="form-check-label" for="inlineRadio1">Sim</label>
+                                <input class="form-check-input" type="radio" name="bebeOp" id="b1" value="1">
+                                <label class="form-check-label" for="b1">Sim</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="2" value="2">
-                                <label class="form-check-label" for="inlineRadio2">Não</label>
+                                <input class="form-check-input" type="radio" name="bebeOp" id="b2" value="2">
+                                <label class="form-check-label" for="b1">Não</label>
                             </div>
+
                         </div>
 
                     </div>
@@ -167,14 +169,12 @@
                         <div class="col">
                             <label>Bebe água?</label>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                    value="1">
-                                <label class="form-check-label" for="inlineRadio1">Sim</label>
+                                <input class="form-check-input" type="radio" name="aguaOp" id="a1" value="1">
+                                <label class="form-check-label" for="a1">Sim</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                    value="2">
-                                <label class="form-check-label" for="inlineRadio2">Não</label>
+                                <input class="form-check-input" type="radio" name="aguaOp" id="a2" value="2">
+                                <label class="form-check-label" for="a2">Não</label>
                             </div>
                         </div>
                         <div class="col">
@@ -184,24 +184,45 @@
                     </div>
 
                     <div class="form-row">
-                            <div class="col">
-                                    <label>Sono </label><br>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                            value="1">
-                                        <label class="form-check-label" for="inlineRadio1">Insonia</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                            value="2">
-                                        <label class="form-check-label" for="inlineRadio2">Menos de 8 horas</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                                value="3">
-                                            <label class="form-check-label" for="inlineRadio2">Mais de 8 horas</label>
-                                   </div>
-                                </div>
+                        <div class="col">
+                            <label>Sono: </label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sonoOp" id="s1" value="1">
+                                <label class="form-check-label" for="s1">Insonia</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sonoOp" id="s2" value="2">
+                                <label class="form-check-label" for="s2">Menos de 8 horas</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sonoOp" id="s3" value="3">
+                                <label class="form-check-label" for="s3">Mais de 8 horas</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label>Faz dieta com restrição?</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="dietaOp" id="d1" value="1">
+                                <label class="form-check-label" for="d1">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="dietaOp" id="d2" value="2">
+                                <label class="form-check-label" for="d2">Não</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label>Se sim, com acompanhamento médico?</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="medicoOp" id="m1" value="1">
+                                <label class="form-check-label" for="m1">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="medicoOp" id="m2" value="2">
+                                <label class="form-check-label" for="m2">Não</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
