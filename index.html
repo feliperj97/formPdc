@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <title>PDC - Anaminése Geral</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <section class="container">
+
+        <form id="pacient-data">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="personal-tab" data-toggle="tab" href="#personal" role="tab"
+                        aria-controls="home" aria-selected="true">Dados Pessoais</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="history-tab" data-toggle="tab" href="#history" role="tab" aria-controls="profile"
+                        aria-selected="false">Histórico</a>
+                </li>
+                
+            </ul>
+            
+
+            <fieldset class="form-group">
+                <h2>Ficha do cliente</h2>
+            </fieldset>
+
+            <div class="tab-content" id="myTabContent">
+                <div class="form-row">
+                    <div class="col">
+                        <label for="avdate">Data da avaliação</label>
+                        <input type="date" class="form-control" name="avDate" id="avdate">
+                    </div>
+                </div><br>
+                <div id="personal" class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="personal-tab">
+                    <!--DADOS PESSOAIS DO PACIENTE-->
+                    <h3>Dados pessoais</h3>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="cliname">Nome</label>
+                            <input type="text" class="form-control" name="name" id="cliname" required>
+                        </div>
+
+                        <div class="col">
+                            <label for="inputSexo">Sexo</label>
+                            <select id="inputSexo" class="form-control">
+                                <option selected>Selecione</option>
+                                <option value="M">Masculino</option>
+                                <option value="F">Feminino</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="adress">Endereço</label>
+                            <input type="text" name="adress" id="adress" class="form-control">
+                        </div>
+                        <div class="col">
+                            <label for="cep">CEP</label>
+                            <input type="text" name="cep" class="form-control" id="cep">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="contatos">Contatos</label>
+                            <input type="text" name="contatos" id="contatos" class="form-control">
+                        </div>
+                        <div class="col">
+                            <label for="estadoCivil">Estado Civil</label>
+                            <select id="estadoCivil" class="form-control">
+                                <option selected>Selecione</option>
+                                <option value="1">Solteiro(a)</option>
+                                <option value="2">Casado(a)</option>
+                                <option value="3">Divorciado(a)</option>
+                                <option value="4">Viúvo(a)</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="email">Email</label>
+                            <input type="email" name="emailAdress" id="email" class="form-control">
+                        </div>
+                        <div class="col">
+                            <label for="cpf">CPF</label>
+                            <input type="text" name="numCPF" class="form-control" id="cpf">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="dtNasc">Data de nascimento</label>
+                            <input type="date" name="nascimento" id="dtNasc" class="form-control">
+                        </div>
+                        <div class="col">
+                            <label for="ocupacao">Ocupação</label>
+                            <input type="text" name="ocupacao" class="form-control" id="ocupacao">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="indicacao">Indicação</label>
+                            <input type="text" name="indicacao" id="indicacao" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="emergencia">Em caso de emergência avisar</label>
+                            <input type="text" name="nomeEmergencia" class="form-control" id="emergencia">
+                        </div>
+                        <div class="col">
+                            <label for="contatoEmergencia">Contato</label>
+                            <input type="text" name="contatoEmergencia" class="form-control" id="contatoEmergencia">
+                        </div>
+                    </div>
+                </div><br>
+                <!--HITÓRICO DO PACIENTE-->
+                <div id="history" class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="history-tab">
+                    <h3>Histórico</h3>
+                    <div class="form-row">
+
+                        <div class="col">
+                            <label>Fumante: </label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="1">
+                                <label class="form-check-label" for="inlineRadio1">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                    value="2">
+                                <label class="form-check-label" for="inlineRadio2">Não</label>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col">
+                            <label>Etilista(Bebida alcóolica): </label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="1" value="1">
+                                <label class="form-check-label" for="inlineRadio1">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="2" value="2">
+                                <label class="form-check-label" for="inlineRadio2">Não</label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="col">
+                            <label>Bebe água?</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="1">
+                                <label class="form-check-label" for="inlineRadio1">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                    value="2">
+                                <label class="form-check-label" for="inlineRadio2">Não</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="water">Quantos copos/dia?</label>
+                            <input type="text" class="form-control" name="water" id="water">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                            <div class="col">
+                                    <label>Sono </label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                            value="1">
+                                        <label class="form-check-label" for="inlineRadio1">Insonia</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                            value="2">
+                                        <label class="form-check-label" for="inlineRadio2">Menos de 8 horas</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                                value="3">
+                                            <label class="form-check-label" for="inlineRadio2">Mais de 8 horas</label>
+                                   </div>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
