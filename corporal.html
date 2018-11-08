@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <title>PDC - Anaminése Corporal</title>
+</head>
+
+<body>
+    <script src="functions.js"></script>
+    <header>
+
+    </header>
+    <section class="container">
+        <form name="formEstetica" id="formEstetica">
+            <fieldset class="form-group">
+
+                <h2>Ficha de Avaliação do Biomédico Esteta</h2>
+            </fieldset>
+            <div class="form-row">
+                <label for="nomeId">Nome</label>
+                <input type="text" class="form-control" name="nome" id=nomeId>
+            </div>
+            <div class="form-row">
+                <label for="queixaId">Queixa principal</label>
+                <input type="text" name="queixa" class="form-control" id="queixaId">
+            </div>
+            <div class="form-row">
+                <label for="queixaId">História do Distúrbio Atual:</label>
+                <input type="text" name="queixa" class="form-control" id="queixaId">
+            </div> <br>
+            <h3>Inspeção/Palpação</h3>
+            <div class="form-row">
+                <div class="col">
+                    <label for="altura">Altura</label>
+                    <input type="text" name="altura" class="form-control" id="altura">
+                </div>
+                <div class="col">
+                    <label for="peso">Peso</label>
+                    <input type="text" name="peso" class="form-control" id="peso">
+                </div>
+                <div class="col">
+                    <label for="imc">IMC</label>
+                    <input type="text" name="imc" class="form-control" id="imc" onfocus="calcula_imc()">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label for="flac">Flácidez Muscular:</label>
+                    <select id="flac" class="form-control">
+                        <option selected>Selecione</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="funcM">Teste de função muscular</label>
+                    <select id="funcMnc" class="form-control">
+                        <option selected>Selecione</option>
+                        <option value="sim">Positivo</option>
+                        <option value="nao">Negativo</option>
+
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="muscAva">Músculo(s) avaliado(s)</label>
+                    <input type="text" class="form-control" name="muscAv" id="muscAva">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label for="flacDerm">Flácidez dérmica:</label>
+                    <select id="flacDerm" class="form-control">
+                        <option selected>Selecione</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="pinc">Teste de pinçamento</label>
+                    <select id="pinc" class="form-control">
+                        <option selected>Selecione</option>
+                        <option value="sim">Positivo</option>
+                        <option value="nao">Negativo</option>
+
+                    </select>
+                </div>
+
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label for="feg">FEG:</label>
+                    <select id="feg" class="form-control">
+                        <option selected>Selecione</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+
+                    </select><br>
+                    <label>Grau</label>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="opt" id="opt1">
+                        <label for="opt1">Grau I - visível somente à palpação ou sob contração voluntária, não tem
+                            fibrose, sem alteração de sensibilidade.</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="opt" id="opt2">
+                        <label for="opt2">Grau II - visível mesmo sem compressão. Já pode ocorrer alteração de
+                            sensibilidade.</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="opt" id="opt3">
+                        <label for="opt3">Grau III - observado em qualquer posição, há fibrose e aderências,
+                            apresenta sensibilidade a dor aumentada.</label>
+                    </div>
+
+                </div>
+                <div class="col">
+                    <label for="casca">Teste da "Casca de laranja"</label>
+                    <select id="casca" class="form-control">
+                        <option selected>Selecione</option>
+                        <option value="sim">Positivo</option>
+                        <option value="nao">Negativo</option>
+
+                    </select><br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="option" id="op1" value="1">
+                        <label class="form-check-label" for="op1">COMPACTA OU DURA: Pessoas com bom trofismo muscular
+                            (jovens), em atletas, grandes obesos. Mais
+                            localizada e não muda de posição conforme a mudança de decúbito. Os nódulos parecem duros
+                            com pouca
+                            mobilidade. É mais dolorida e o prognóstico é pior, pois é de difícil mobilização do
+                            tecido. Geralmente o
+                            contorno corporal e a anatomia estética estão mantidos.</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="option" id="op2" value="2">
+                        <label class="form-check-label" for="op2">EDEMATOSA: Encontrada em indivíduos sedentários, em
+                            pessoas que emagreceram rapidamente e após os
+                            40 anos. Muda de posição de acordo com a alteração de decúbito. Os nódulos se mobilizam com
+                            a palpação. É
+                            de melhor prognóstico. É a forma clínica mais freqüente.</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="option" id="op3" value="3">
+                        <label class="form-check-label" for="op3">FLACIDA: Comum em pessoas que utilizam
+                            anticoncepcionais. O sinal da “casca de laranja” é precoce,
+                            péssimo prognóstico quanto à reversão. Aspecto pastoso, podendo ou não apresentar sinal de
+                            cacifo. Há sinais e
+                            sintomas que destacam o comprometimento circulatório.</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="option" id="op4" value="4">
+                        <label class="form-check-label" for="op4">EDEMATOSA: Encontrada em indivíduos sedentários, em
+                            pessoas que emagreceram rapidamente e após os
+                            40 anos. Muda de posição de acordo com a alteração de decúbito. Os nódulos se mobilizam com
+                            a palpação. É
+                            de melhor prognóstico. É a forma clínica mais freqüente.</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="option" id="op5" value="5">
+                        <label class="form-check-label" for="op5">MISTA: associação de 2 ou mais tipos.</label>
+                        <label for="outros">Quais?</label>
+                        <input type="text" name="outros" id="outros">
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label for="lipo">Lipodistrofia:</label>
+                    <select id="lipo" class="form-control">
+                        <option selected>Selecione</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="lipoTipo">Tipo:</label>
+                    <select id="lipoTipo" class="form-control">
+                        <option selected>Selecione</option>
+                        <option value="sim">andróide – “maçã”</option>
+                        <option value="nao">ginóide – “pêra”</option>
+
+                    </select>
+                </div>
+
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label for="estria">Estrias:</label>
+                    <select id="estria" class="form-control">
+                        <option selected>Selecione</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="tipoEst">Tipo:</label>
+                    <input type="text" class="form-control" name="estria" id="estria">
+                </div>
+                <div class="col">
+                    <label for="tempoSurg">Tempo de surgimento:</label>
+                    <input type="text" class="form-control" name="tempoSurg" id="tempoSurg">
+                </div>
+            </div>
+        </form>
+
+    </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

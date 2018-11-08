@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <title>PDC - Anaminése Geral</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <section class="container">
+
+        <form id="pacient-data">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="personal-tab" data-toggle="tab" href="#personal" role="tab"
+                        aria-controls="home" aria-selected="true">Dados Pessoais</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="history-tab" data-toggle="tab" href="#history" role="tab" aria-controls="profile"
+                        aria-selected="false">Histórico</a>
+                </li>
+
+            </ul>
+
+
+            <fieldset class="form-group">
+                <h2>Ficha do cliente</h2>
+            </fieldset>
+
+            <div class="tab-content" id="myTabContent">
+                <div class="form-row">
+                    <div class="col">
+                        <label for="avdate">Data da avaliação</label>
+                        <input type="date" class="form-control" name="avDate" id="avdate">
+                    </div>
+                </div>
+                <br>
+                <div id="personal" class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="personal-tab">
+                    <!--DADOS PESSOAIS DO PACIENTE-->
+                    <h3>Dados pessoais</h3>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="cliname">Nome</label>
+                            <input type="text" class="form-control" name="name" id="cliname" required>
+                        </div>
+
+                        <div class="col">
+                            <label for="inputSexo">Sexo</label>
+                            <select id="inputSexo" class="form-control">
+                                <option selected>Selecione</option>
+                                <option value="M">Masculino</option>
+                                <option value="F">Feminino</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="adress">Endereço</label>
+                            <input type="text" name="adress" id="adress" class="form-control">
+                        </div>
+                        <div class="col">
+                            <label for="cep">CEP</label>
+                            <input type="text" name="cep" class="form-control" id="cep">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="contatos">Contatos</label>
+                            <input type="text" name="contatos" id="contatos" class="form-control">
+                        </div>
+                        <div class="col">
+                            <label for="estadoCivil">Estado Civil</label>
+                            <select id="estadoCivil" class="form-control">
+                                <option selected>Selecione</option>
+                                <option value="1">Solteiro(a)</option>
+                                <option value="2">Casado(a)</option>
+                                <option value="3">Divorciado(a)</option>
+                                <option value="4">Viúvo(a)</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="email">Email</label>
+                            <input type="email" name="emailAdress" id="email" class="form-control">
+                        </div>
+                        <div class="col">
+                            <label for="cpf">CPF</label>
+                            <input type="text" name="numCPF" class="form-control" id="cpf">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="dtNasc">Data de nascimento</label>
+                            <input type="date" name="nascimento" id="dtNasc" class="form-control">
+                        </div>
+                        <div class="col">
+                            <label for="ocupacao">Ocupação</label>
+                            <input type="text" name="ocupacao" class="form-control" id="ocupacao">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="indicacao">Indicação</label>
+                            <input type="text" name="indicacao" id="indicacao" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="emergencia">Em caso de emergência avisar</label>
+                            <input type="text" name="nomeEmergencia" class="form-control" id="emergencia">
+                        </div>
+                        <div class="col">
+                            <label for="contatoEmergencia">Contato</label>
+                            <input type="text" name="contatoEmergencia" class="form-control" id="contatoEmergencia">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!--HISTÓRICO DO PACIENTE-->
+                <div id="history" class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="history-tab">
+                    <h3>Histórico</h3>
+                    <div class="form-row">
+
+                        <div class="col">
+                            <label>Fumante:</label>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="fumanteOp" id="idFuma" value="1">
+                                <label class="form-check-label" for="idFuma">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="fumanteOp" id="idNaoFuma" value="2">
+                                <label class="form-check-label" for="idNaoFuma">Não</label>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="col">
+                            <label>Etilista(Bebida alcóolica): </label>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="bebeOp" id="b1" value="1">
+                                <label class="form-check-label" for="b1">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="bebeOp" id="b2" value="2">
+                                <label class="form-check-label" for="b1">Não</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="col">
+                            <label>Bebe água?</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="aguaOp" id="a1" value="1">
+                                <label class="form-check-label" for="a1">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="aguaOp" id="a2" value="2">
+                                <label class="form-check-label" for="a2">Não</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="water">Quantos copos/dia?</label>
+                            <input type="text" class="form-control" name="water" id="water">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <!-- <div class="col"> -->
+                        <label for="sonoId">Sono</label>
+                        <select id="sonoId" class="form-control">
+                            <option selected>Selecione</option>
+                            <option value="1">Insonia</option>
+                            <option value="2">Menos de 8 horas</option>
+                            <option value="3">Mais de 8 horas</option>
+                        </select>
+
+                        <!-- </div> -->
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label>Faz dieta com restrição?</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="dietaOp" id="d1" value="1">
+                                <label class="form-check-label" for="d1">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="dietaOp" id="d2" value="2">
+                                <label class="form-check-label" for="d2">Não</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label>Se sim, com acompanhamento médico?</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="medicoOp" id="m1" value="1">
+                                <label class="form-check-label" for="m1">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="medicoOp" id="m2" value="2">
+                                <label class="form-check-label" for="m2">Não</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label for="horarioAlimentacao">Qual horário mais se alimenta?</label>
+                        <select id="horarioAlimentacao" class="form-control">
+                            <option selected>Selecione</option>
+                            <option value="1">Manhã</option>
+                            <option value="2">Tarde</option>
+                            <option value="3">Noite</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="gestacao">Gestação</label>
+                        <select id="gestacao" class="form-control">
+                            <option selected>Selecione</option>
+                            <option value="1">Nulípara(nunca foi gestante)</option>
+                            <option value="2">Primípara(1 gestação)</option>
+                            <option value="3">Multípara(Várias gestações)</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label>Pratica atividade física: </label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="fisicaOp" id="f1" value="1">
+                                <label class="form-check-label" for="f1">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="fisicaOp" id="f2" value="2">
+                                <label class="form-check-label" for="f2">Não</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="fiscaId">Qual tipo?</label>
+                            <input type="text" class="form-control" id="fisicaId">
+
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="ciclo">Ciclo menstrual</label>
+                            <select id="ciclo" class="form-control">
+                                <option selected>Selecione</option>
+                                <option value="1">Regular</option>
+                                <option value="2">Irregular</option>
+                                <option value="3">Não possui(hiserectomia - ligadura)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="anticon">Método anticoncepcional</label>
+                            <select id="anticon" class="form-control">
+                                <option selected>Selecione</option>
+                                <option value="1">Pilula</option>
+                                <option value="2">DIU</option>
+                                <option value="3">Injeção</option>
+                                <option value="4">Camisinha</option>
+                                <option value="5">nda</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label for="sindrome">Sindrome Pré-menstrual</label>
+                            <select id="sindrome" class="form-control">
+                                <option selected>Selecione</option>
+                                <option value="1">Edema</option>
+                                <option value="2">Ansiedade</option>
+                                <option value="3">Irritação</option>
+                                <option value="4">Doces</option>
+                                <option value="5">nda</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label for="vestuario">Tipo de vestuário que mais usa</label>
+                        <input type="text" name="vest" class="form-control" id="vestuario">
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label>Exposição solar</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="solOp" id="sol1" value="1">
+                                <label class="form-check-label" for="sol1">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="solOp" id="sol2" value="2">
+                                <label class="form-check-label" for="sol2">Não</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="frequencia">Frequência</label>
+                            <input type="text" class="form-control" name="freq" id="frequencia">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label>Possui hábitos de cuidados diários com a pele?</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="peleOp" id="pele1" value="1">
+                                <label class="form-check-label" for="pele1">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="peleOp" id="pele2" value="2">
+                                <label class="form-check-label" for="pele2">Não</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="tipo">Qual tipo?</label>
+                            <input type="text" class="form-control" name="tipo" id="tipo">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label for="cosm">Cosméticos em uso:</label>
+                        <input type="text" name="cosmetico" class="form-control" id="cosm">
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label>Ja realizou algum tratamento estético anteriormente?</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="peleOp" id="tr1" value="1">
+                                <label class="form-check-label" for="tr1">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="peleOp" id="tr2" value="2">
+                                <label class="form-check-label" for="tr2">Não</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="tratamento">Qual?</label>
+                            <input type="text" class="form-control" name="trat" id="tratamento">
+                        </div>
+                        <div class="col">
+                            <label>O resultado foi positivo?</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="peleOp" id="tr1" value="1">
+                                <label class="form-check-label" for="tr1">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="peleOp" id="tr2" value="2">
+                                <label class="form-check-label" for="tr2">Não</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label>Possui alguma doença?</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="doencaOp" id="doenca1" value="1">
+                                <label class="form-check-label" for="doenca1">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="doencaOp" id="doenca2" value="2">
+                                <label class="form-check-label" for="doenca2">Não</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="tipoDoenca">Quais?</label>
+                            <input type="text" class="form-control" name="tipoD" id="tipoDoenca">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label>Doenças existentes da familia?</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="doencaOp" id="doencaF1" value="1">
+                                <label class="form-check-label" for="doencaF1">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="doencaOp" id="doencaF2" value="2">
+                                <label class="form-check-label" for="doencaF2">Não</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="tipoDFamilia">Quais?</label>
+                            <input type="text" class="form-control" name="tipoDoenca" id="tipoDFamilia">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
